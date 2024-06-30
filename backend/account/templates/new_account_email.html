@@ -1,0 +1,17 @@
+{% load i18n %}{% autoescape off %}
+{% blocktranslate %}Thank you for joining Harmony!{% endblocktranslate %}
+
+{% translate 'Dear ' %} {{ user.get_username }}','
+
+{% translate "Please enter the below OTP to activate your account." %}
+{% block reset_link %}
+{{ otp }}
+
+{{ 'Please do not share this OTP with anyone.' }}
+{% endblock %}
+
+{% translate "Best regards," %}
+
+{% blocktranslate %}The Harmony Team{% endblocktranslate %}
+
+{% endautoescape %}
